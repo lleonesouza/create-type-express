@@ -32,5 +32,5 @@ To run the Docker Image ->
 -------------
 🍀 Hello World Route => 
 
-https://localhost:5000/api
+http://localhost:5000/api
 
