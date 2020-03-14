@@ -5,7 +5,7 @@ Webpack || Typescript || Docker || Express || Jest
 
 -------------
 
-🍀 Layers:
+🍀 Layers and Dependencies Flow:
 
 Routes ⏪ Controllers ⏪ Use-Cases ⏪ ...
 
@@ -13,8 +13,10 @@ Routes ⏪ Controllers ⏪ Use-Cases ⏪ ...
 
 🍀 Curry Function Injecting useCases in Controllers Example:
 
+
+```javascript
 const getHelloWorld = ({ useCases }: any) => {
-    return async (req: any, res: any) => {
+    return (req: any, res: any) => {
       try {
         res.send(useCases);
       } catch (err) {
@@ -22,6 +24,8 @@ const getHelloWorld = ({ useCases }: any) => {
       }
     };
   };
+```
+
 
 -------------
 🍀 Get Development Started 
