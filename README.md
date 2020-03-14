@@ -1,7 +1,27 @@
 Type Express Server Generator
 
-built with ❤ and: 
+built with ❤ and:
 Webpack || Typescript || Docker || Express || Jest
+
+-------------
+
+🍀 Layers:
+
+Routes ⏪ Controllers ⏪ Use-Cases ⏪ ...
+
+-------------
+
+🍀 Curry Function Injecting useCases in Controllers Example:
+
+const getHelloWorld = ({ useCases }: any) => {
+    return async (req: any, res: any) => {
+      try {
+        res.send(useCases);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  };
 
 -------------
 🍀 Get Development Started 
