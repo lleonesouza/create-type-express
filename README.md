@@ -13,19 +13,17 @@ Routes ⏪ Controllers ⏪ Use-Cases ⏪ ...
 
 🍀 Curry Function Injecting useCases in Controllers Example:
 
-
 ```javascript
-const getHelloWorld = ({ useCases }: any) => {
-    return (req: any, res: any) => {
+const getHelloWorld = ({ useCases }) => {
+    return (req, res) => {
       try {
-        res.send(useCases);
+      // Controller code
       } catch (err) {
         console.log(err);
       }
     };
   };
 ```
-
 
 -------------
 🍀 Get Development Started 
