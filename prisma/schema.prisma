@@ -1,0 +1,2781 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model account {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Account")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model account_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Account")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model activitydefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ActivityDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model activitydefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ActivityDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model adverseevent {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("AdverseEvent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model adverseevent_history {
+  id            String
+  resource      String
+  resource_type String?         @default("AdverseEvent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model allergyintolerance {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("AllergyIntolerance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model allergyintolerance_history {
+  id            String
+  resource      String
+  resource_type String?         @default("AllergyIntolerance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model appointment {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Appointment")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model appointment_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Appointment")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model appointmentresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("AppointmentResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model appointmentresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("AppointmentResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model auditevent {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("AuditEvent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model auditevent_history {
+  id            String
+  resource      String
+  resource_type String?         @default("AuditEvent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model basic {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Basic")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model basic_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Basic")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model binary {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Binary")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model binary_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Binary")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model biologicallyderivedproduct {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("BiologicallyDerivedProduct")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model biologicallyderivedproduct_history {
+  id            String
+  resource      String
+  resource_type String?         @default("BiologicallyDerivedProduct")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model bodystructure {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("BodyStructure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model bodystructure_history {
+  id            String
+  resource      String
+  resource_type String?         @default("BodyStructure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model capabilitystatement {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CapabilityStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model capabilitystatement_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CapabilityStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model careplan {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CarePlan")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model careplan_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CarePlan")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model careteam {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CareTeam")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model careteam_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CareTeam")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model chargeitem {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ChargeItem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model chargeitem_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ChargeItem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model claim {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Claim")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model claim_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Claim")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model claimresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ClaimResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model claimresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ClaimResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model clinicalimpression {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ClinicalImpression")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model clinicalimpression_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ClinicalImpression")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model codesystem {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CodeSystem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model codesystem_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CodeSystem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model communication {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Communication")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model communication_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Communication")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model communicationrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CommunicationRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model communicationrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CommunicationRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model compartmentdefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("CompartmentDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model compartmentdefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("CompartmentDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model composition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Composition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model composition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Composition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model concept {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Concept")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model concept_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Concept")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model conceptmap {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ConceptMap")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model conceptmap_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ConceptMap")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model condition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Condition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model condition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Condition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model consent {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Consent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model consent_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Consent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model contract {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Contract")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model contract_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Contract")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model coverage {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Coverage")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model coverage_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Coverage")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model detectedissue {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DetectedIssue")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model detectedissue_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DetectedIssue")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model device {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Device")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model devicecomponent {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DeviceComponent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model devicecomponent_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DeviceComponent")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model device_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Device")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model devicemetric {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DeviceMetric")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model devicemetric_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DeviceMetric")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model devicerequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DeviceRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model devicerequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DeviceRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model deviceusestatement {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DeviceUseStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model deviceusestatement_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DeviceUseStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model diagnosticreport {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DiagnosticReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model diagnosticreport_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DiagnosticReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model documentmanifest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DocumentManifest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model documentmanifest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DocumentManifest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model documentreference {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("DocumentReference")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model documentreference_history {
+  id            String
+  resource      String
+  resource_type String?         @default("DocumentReference")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model eligibilityrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EligibilityRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model eligibilityrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EligibilityRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model eligibilityresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EligibilityResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model eligibilityresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EligibilityResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model encounter {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Encounter")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model encounter_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Encounter")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model endpoint {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Endpoint")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model endpoint_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Endpoint")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model enrollmentrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EnrollmentRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model enrollmentrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EnrollmentRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model enrollmentresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EnrollmentResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model enrollmentresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EnrollmentResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model entrydefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EntryDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model entrydefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EntryDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model episodeofcare {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EpisodeOfCare")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model episodeofcare_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EpisodeOfCare")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model eventdefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("EventDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model eventdefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("EventDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model examplescenario {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ExampleScenario")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model examplescenario_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ExampleScenario")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model expansionprofile {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ExpansionProfile")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model expansionprofile_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ExpansionProfile")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model explanationofbenefit {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ExplanationOfBenefit")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model explanationofbenefit_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ExplanationOfBenefit")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model familymemberhistory {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("FamilyMemberHistory")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model familymemberhistory_history {
+  id            String
+  resource      String
+  resource_type String?         @default("FamilyMemberHistory")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model flag {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Flag")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model flag_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Flag")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model goal {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Goal")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model goal_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Goal")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model graphdefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("GraphDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model graphdefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("GraphDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model group {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Group")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model group_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Group")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model guidanceresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("GuidanceResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model guidanceresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("GuidanceResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model healthcareservice {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("HealthcareService")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model healthcareservice_history {
+  id            String
+  resource      String
+  resource_type String?         @default("HealthcareService")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model imagingstudy {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ImagingStudy")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model imagingstudy_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ImagingStudy")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model immunization {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Immunization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model immunizationevaluation {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ImmunizationEvaluation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model immunizationevaluation_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ImmunizationEvaluation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model immunization_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Immunization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model immunizationrecommendation {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ImmunizationRecommendation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model immunizationrecommendation_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ImmunizationRecommendation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model implementationguide {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ImplementationGuide")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model implementationguide_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ImplementationGuide")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model invoice {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Invoice")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model invoice_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Invoice")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model iteminstance {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ItemInstance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model iteminstance_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ItemInstance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model library {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Library")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model library_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Library")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model linkage {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Linkage")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model linkage_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Linkage")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model list {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("List")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model list_history {
+  id            String
+  resource      String
+  resource_type String?         @default("List")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model location {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Location")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model location_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Location")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model measure {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Measure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model measure_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Measure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model measurereport {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MeasureReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model measurereport_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MeasureReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model media {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Media")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model media_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Media")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medication {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Medication")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicationadministration {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicationAdministration")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicationadministration_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicationAdministration")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicationdispense {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicationDispense")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicationdispense_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicationDispense")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medication_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Medication")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicationrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicationRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicationrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicationRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicationstatement {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicationStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicationstatement_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicationStatement")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproduct {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProduct")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductauthorization {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductAuthorization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductauthorization_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductAuthorization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproductclinicals {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductClinicals")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductclinicals_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductClinicals")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproductdevicespec {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductDeviceSpec")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductdevicespec_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductDeviceSpec")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproduct_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProduct")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproductingredient {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductIngredient")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductingredient_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductIngredient")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproductpackaged {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductPackaged")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductpackaged_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductPackaged")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model medicinalproductpharmaceutical {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MedicinalProductPharmaceutical")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model medicinalproductpharmaceutical_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MedicinalProductPharmaceutical")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model messagedefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MessageDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model messagedefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MessageDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model messageheader {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MessageHeader")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model messageheader_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MessageHeader")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model metadataresource {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("MetadataResource")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model metadataresource_history {
+  id            String
+  resource      String
+  resource_type String?         @default("MetadataResource")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model namingsystem {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("NamingSystem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model namingsystem_history {
+  id            String
+  resource      String
+  resource_type String?         @default("NamingSystem")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model nutritionorder {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("NutritionOrder")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model nutritionorder_history {
+  id            String
+  resource      String
+  resource_type String?         @default("NutritionOrder")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model observation {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Observation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model observationdefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ObservationDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model observationdefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ObservationDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model observation_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Observation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model occupationaldata {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("OccupationalData")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model occupationaldata_history {
+  id            String
+  resource      String
+  resource_type String?         @default("OccupationalData")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model operationdefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("OperationDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model operationdefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("OperationDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model operationoutcome {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("OperationOutcome")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model operationoutcome_history {
+  id            String
+  resource      String
+  resource_type String?         @default("OperationOutcome")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model organization {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Organization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model organization_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Organization")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model organizationrole {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("OrganizationRole")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model organizationrole_history {
+  id            String
+  resource      String
+  resource_type String?         @default("OrganizationRole")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model parameters {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Parameters")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model parameters_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Parameters")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model patient {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Patient")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model patient_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Patient")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model paymentnotice {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("PaymentNotice")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model paymentnotice_history {
+  id            String
+  resource      String
+  resource_type String?         @default("PaymentNotice")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model paymentreconciliation {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("PaymentReconciliation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model paymentreconciliation_history {
+  id            String
+  resource      String
+  resource_type String?         @default("PaymentReconciliation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model person {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Person")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model person_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Person")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model plandefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("PlanDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model plandefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("PlanDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model practitioner {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Practitioner")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model practitioner_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Practitioner")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model practitionerrole {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("PractitionerRole")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model practitionerrole_history {
+  id            String
+  resource      String
+  resource_type String?         @default("PractitionerRole")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model procedure {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Procedure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model procedure_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Procedure")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model processrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ProcessRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model processrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ProcessRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model processresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ProcessResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model processresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ProcessResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model productplan {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ProductPlan")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model productplan_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ProductPlan")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model provenance {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Provenance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model provenance_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Provenance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model questionnaire {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Questionnaire")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model questionnaire_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Questionnaire")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model questionnaireresponse {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("QuestionnaireResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model questionnaireresponse_history {
+  id            String
+  resource      String
+  resource_type String?         @default("QuestionnaireResponse")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model relatedperson {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("RelatedPerson")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model relatedperson_history {
+  id            String
+  resource      String
+  resource_type String?         @default("RelatedPerson")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model requestgroup {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("RequestGroup")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model requestgroup_history {
+  id            String
+  resource      String
+  resource_type String?         @default("RequestGroup")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model researchstudy {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ResearchStudy")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model researchstudy_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ResearchStudy")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model researchsubject {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ResearchSubject")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model researchsubject_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ResearchSubject")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model riskassessment {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("RiskAssessment")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model riskassessment_history {
+  id            String
+  resource      String
+  resource_type String?         @default("RiskAssessment")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model schedule {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Schedule")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model schedule_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Schedule")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model sequence {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Sequence")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model sequence_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Sequence")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model servicerequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ServiceRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model servicerequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ServiceRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model slot {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Slot")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model slot_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Slot")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model specimen {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Specimen")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model specimendefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SpecimenDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model specimendefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SpecimenDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model specimen_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Specimen")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model structuredefinition {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("StructureDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model structuredefinition_history {
+  id            String
+  resource      String
+  resource_type String?         @default("StructureDefinition")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model structuremap {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("StructureMap")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model structuremap_history {
+  id            String
+  resource      String
+  resource_type String?         @default("StructureMap")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model subscription {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Subscription")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model subscription_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Subscription")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model substance {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Substance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model substance_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Substance")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model substancepolymer {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SubstancePolymer")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model substancepolymer_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SubstancePolymer")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model substancereferenceinformation {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SubstanceReferenceInformation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model substancereferenceinformation_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SubstanceReferenceInformation")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model substancespecification {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SubstanceSpecification")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model substancespecification_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SubstanceSpecification")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model supplydelivery {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SupplyDelivery")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model supplydelivery_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SupplyDelivery")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model supplyrequest {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("SupplyRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model supplyrequest_history {
+  id            String
+  resource      String
+  resource_type String?         @default("SupplyRequest")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model task {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("Task")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model task_history {
+  id            String
+  resource      String
+  resource_type String?         @default("Task")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model terminologycapabilities {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("TerminologyCapabilities")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model terminologycapabilities_history {
+  id            String
+  resource      String
+  resource_type String?         @default("TerminologyCapabilities")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model testreport {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("TestReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model testreport_history {
+  id            String
+  resource      String
+  resource_type String?         @default("TestReport")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model testscript {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("TestScript")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model testscript_history {
+  id            String
+  resource      String
+  resource_type String?         @default("TestScript")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model transaction {
+  id       Int       @default(autoincrement()) @id
+  resource String?
+  ts       DateTime? @default(now())
+}
+
+model usersession {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("UserSession")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model usersession_history {
+  id            String
+  resource      String
+  resource_type String?         @default("UserSession")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model valueset {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("ValueSet")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model valueset_history {
+  id            String
+  resource      String
+  resource_type String?         @default("ValueSet")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model verificationresult {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("VerificationResult")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model verificationresult_history {
+  id            String
+  resource      String
+  resource_type String?         @default("VerificationResult")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+model visionprescription {
+  id            String          @id
+  resource      String
+  resource_type String?         @default("VisionPrescription")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+}
+
+model visionprescription_history {
+  id            String
+  resource      String
+  resource_type String?         @default("VisionPrescription")
+  status        resource_status
+  ts            DateTime?       @default(now())
+  txid          Int
+
+  @@id([id, txid])
+}
+
+enum resource_status {
+  created
+  deleted
+  recreated
+  updated
+}
