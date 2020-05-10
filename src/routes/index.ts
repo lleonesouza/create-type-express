@@ -1,8 +1,11 @@
-import helloWorld from "./helloWorld/index";
+
 import controllers from "../controllers/index";
 
+const {item, user} = controllers
+
 const makeRoutes = (router: any) => {
-    helloWorld(router, controllers);
+  router.get("/", item.get);
+  router.get("/user", user.get);
 
   return router;
 };

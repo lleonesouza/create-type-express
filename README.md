@@ -1,47 +1,69 @@
-Type Express Server Generator
+# Type Express Server Generator
 
-built with ❤ and:
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+built with:
 Webpack || Typescript || Docker || Express || Jest
 
--------------
+## Commons Layers Flow
+###FlowChart
 
-🍀 Layers and Dependencies Flow:
+```flow
+layer0=>operation: Controller
+request=>start: Request
+layer1=>operation: UseCases
+layer2=>operation: Entities
+e=>end:To admin
 
-Routes ⏪ Controllers ⏪ Use-Cases ⏪ ...
+request->layer0->layer1->layer2
+```
 
--------------
+## 🍀 Inverse Dependencies:
 
-🍀 Curry Function Injecting useCases in Controllers Example:
+Routes ⏪ Controllers ⏪ Use-Cases ⏪ Entities
+
+## 🍀 Curry Function:
 
 ```javascript
-const getHelloWorld = ({ useCases }) => {
-    return (req, res) => {
+const item = ({ useCases }) => {
+    return {
+    // Item Get Controller
+      get: (req, res) => {
       try {
-      // Controller code
       } catch (err) {
         console.log(err);
-      }
-    };
+      },
+    },
+    // Item Put Controller
+    put: (req, res) => {
+      try {
+      } catch (err) {
+        console.log(err);
+      },
+    }
+    }
   };
 ```
 
--------------
-🍀 Get Development Started 
+## 🍀 Get Development Started 
 
-with Yarn:
+```shell
+yarn install
+yarn dev
+yarn build
+yarn test
+```
 
-➡ yarn dev
-➡ yarn build
-➡ yarn test
+or 
 
-with Npm: 
+```shell
+npm install
+npm run dev
+npm run build
+npm run test
+```
 
-➡ npm run dev
-➡ npm run build
-➡ npm run test
-
--------------
-🍀 Deploy with Docker
+## 🍀 Build and run on Docker
 
 To create an Docker Image -> 
 
@@ -52,7 +74,9 @@ To run the Docker Image ->
 ➡ docker run -p 5000:5000 --name typeexpress -d typeexpress
 
 -------------
-🍀 Hello World Route => 
+## 🍀 Hello World Route => 
 
 http://localhost:5000/api
+
+http://localhost:5000/api/user
 
