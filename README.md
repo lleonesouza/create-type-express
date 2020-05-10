@@ -1,12 +1,12 @@
 # Type Express Server Generator
-
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
-
 built with:
 Webpack || Typescript || Docker || Express || Jest
 
-## Commons Layers Flow
-###FlowChart
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+
+<!-- ## Commons Layers Flow
+
 
 ```flow
 layer0=>operation: Controller
@@ -16,7 +16,7 @@ layer2=>operation: Entities
 e=>end:To admin
 
 request->layer0->layer1->layer2
-```
+``` -->
 
 ## 🍀 Inverse Dependencies:
 
@@ -47,6 +47,7 @@ const item = ({ useCases }) => {
 
 ## 🍀 Get Development Started 
 
+with yarn:
 ```shell
 yarn install
 yarn dev
@@ -54,8 +55,7 @@ yarn build
 yarn test
 ```
 
-or 
-
+with npm:
 ```shell
 npm install
 npm run dev
@@ -65,16 +65,16 @@ npm run test
 
 ## 🍀 Build and run on Docker
 
-To create an Docker Image -> 
-
-➡ docker build -t typeexpress .
-
-To run the Docker Image -> 
-
-➡ docker run -p 5000:5000 --name typeexpress -d typeexpress
-
+Create an Docker Image:
+```shell
+docker build -t typeexpress .
+```
+Run the Docker Image:
+```shell
+docker run -p 5000:5000 --name typeexpress -d typeexpress
+```
 -------------
-## 🍀 Hello World Route => 
+## 🍀 Hello World Route
 
 http://localhost:5000/api
 
