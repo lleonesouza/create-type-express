@@ -437,15 +437,17 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@prisma/cli@^2.0.0-beta.3":
-  version "2.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.0.0-beta.3.tgz#54ac441bd538aade10acb07912b6751698c766df"
-  integrity sha512-VZxeTLLMenhkAyaY4tvTqChcW6QtUkiVvZj7N6A2vi6HsM1Tnf0fIZsiH1h3e/LEnaaDGIUC8F4Gkh2SeyeyCg==
+"@prisma/cli@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.2.0.tgz#f2f46ea4b406aa08fdd1c9eac7c6ceb608b457ba"
+  integrity sha512-MNb2u/EPML9LZZQSQx/+h/KNNa89UocdQmxF7+ElRi66JckTtMo2A2ZCLw1Xb+1cyYXhcJgMnZ9q2bm5rsF0WA==
 
-"@prisma/client@^2.0.0-beta.3":
-  version "2.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.0.0-beta.3.tgz#a1b2cce4744973481d2891fcb919ab099f118952"
-  integrity sha512-itwRDl9PS8pD9InbHFeh1m3kyMibpZbkMHx9/Q7lNVaxvBJeJjNlVFmclL9AIFMDAUhD+KtspqkBwUHKgJpd7g==
+"@prisma/client@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.2.0.tgz#be390658688702a5980b2c8eec673e5a20d90e36"
+  integrity sha512-i7zcVEtMk3QCPCc/oC+vQG2pyXYWWzhPZ11bBxgULo0gL7C/3GPZvAvAkNxpQ0mmt46EdzvpgEBNbg4VdjiR+Q==
+  dependencies:
+    pkg-up "^3.1.0"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -4484,6 +4486,13 @@ pkg-dir@^4.2.0:
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
   dependencies:
     find-up "^4.0.0"
+
+pkg-up@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.1.0.tgz#100ec235cc150e4fd42519412596a28512a0def5"
+  integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
+  dependencies:
+    find-up "^3.0.0"
 
 pn@^1.1.0:
   version "1.1.0"

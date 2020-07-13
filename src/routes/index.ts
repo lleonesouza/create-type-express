@@ -1,11 +1,14 @@
-
 import controllers from "../controllers/index";
 
-const {item, user} = controllers
+const {  user } = controllers;
 
 const makeRoutes = (router: any) => {
-  router.get("/", item.get);
-  router.get("/user", user.get);
+
+  router.get("/user/:id", user.get);
+  router.put("/user/:id", user.put);
+  router.post("/user", user.post);
+  router.delete("/user/:id", user.delete);
+
 
   return router;
 };
